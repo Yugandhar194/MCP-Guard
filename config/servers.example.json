@@ -1,0 +1,11 @@
+{
+  "approval_timeout_seconds": 180,
+  "servers": [
+    {
+      "name": "example",
+      "command": "python",
+      "args": ["-m", "your_mcp_server"],
+      "env": {}
+    }
+  ]
+}
