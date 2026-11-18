@@ -3,6 +3,7 @@ from __future__ import annotations
 import logging
 import os
 from contextlib import AsyncExitStack
+from dataclasses import dataclass
 from typing import Any
 
 from mcp import ClientSession, StdioServerParameters
@@ -24,8 +25,6 @@ class Upstream:
 
 
 async def run_proxy(config: AppConfig, broker: ApprovalBroker) -> None:
-    from dataclasses import dataclass
-
     async with AsyncExitStack() as stack:
         tool_routes: dict[str, tuple[Upstream, str, Tool]] = {}
         for server_config in config.servers:
