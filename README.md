@@ -45,7 +45,7 @@ source .venv/bin/activate
 Install dependencies and create your local config:
 
 ```bash
-pip install -r requirements.txt
+pip install -e .
 cp config/servers.example.json config/servers.json
 ```
 
@@ -109,7 +109,7 @@ A demo video has not been recorded or uploaded yet. See [demo/README.md](demo/RE
 ## Development
 
 ```bash
-pip install -r requirements-dev.txt
+pip install -e .[dev]
 pytest -q
 ```
 
